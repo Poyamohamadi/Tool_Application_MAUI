@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:ProjectName"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProjectName.BMI">
+    <ScrollView>
+        <ScrollView.Background>
+            <LinearGradientBrush
+                EndPoint="0,1">
+                <GradientStop
+                    Offset="0.0"
+                    Color="#572375" />
+                <GradientStop
+                    Offset="1"
+                    Color="#a594f9" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Frame>
+                <VerticalStackLayout>
+                    <Label
+                        Text="قد ( سانتی متر )"
+                        TextColor="Black"
+                        FontFamily="Vazir"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center" />
+                    <Slider
+                        ValueChanged ="sldCm"
+                        x:Name="sldHeight"
+                        ThumbColor="Black"
+                        Minimum="150"
+                        Maximum="200"
+                        Value="180"
+                        MinimumTrackColor="#5F5B62" />
+                    <Label
+                        x:Name="lblCm"
+                        Text="1,80 cm"
+                        TextColor="Black"
+                        FontFamily="Vazir"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame>
+                <VerticalStackLayout>
+                    <Label
+                        Text="وزن ( کیلوگرم )"
+                        TextColor="Black"
+                        FontFamily="Vazir"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center" />
+                    <Slider
+                        x:Name="sldWeight"
+                        ThumbColor="Black"
+                        Minimum="40"
+                        Maximum="130"
+                        Value="80"
+                        ValueChanged="sldKg"
+                        MinimumTrackColor="#5F5B62" />
+                    <Label
+                        x:Name="lblKg"
+                        Text="80 kg"
+                        TextColor="Black"
+                        FontFamily="Vazir"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame>
+                <VerticalStackLayout
+                    Spacing="15">
+                    <Image
+                        Source="bmi.jpg" />
+                    <Frame>
+                    <Label x:Name="lblBmi"
+                        Text="BMI = "
+                        TextColor="Black"
+                        FontFamily="Vazir" 
+                        FontSize="Large"
+                        HorizontalOptions="Center"/>
+                    </Frame>
+                    <Frame
+                        x:Name = "frBmi"
+                        BackgroundColor="Green">
+                        <Label
+                        x:Name="lblMobe" 
+                        Text="طبیعی"
+                        TextColor="White"
+                        FontFamily="Vazir"
+                        FontSize="Large"
+                        HorizontalOptions="Center"/>
+                        </Frame>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

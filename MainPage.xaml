@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:ProjectName"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProjectName.MainPage">
+    <ScrollView>
+        <ScrollView.Background>
+            <LinearGradientBrush
+                EndPoint="0,1">
+                <GradientStop
+                    Offset="0.0"
+                    Color="#572375" />
+                <GradientStop
+                    Offset="1"
+                    Color="#953ECE" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
+        <VerticalStackLayout>
+            <Grid
+                Padding="15"
+                ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Grid.Column="0"
+                    Text="انتخابگر رنگ"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Clicked="PageColorPicker" />
+                <Button
+                    Grid.Column="1"
+                    Text="محاسبه وام"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HeightRequest="150"
+                    Clicked="PagePerfectPay" />
+            </Grid>
+            <Grid
+                Padding="15,0"
+                ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Grid.Column="0"
+                    Text="BMI"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Clicked="PageBMI"
+                    HeightRequest="150" />
+                <!--<Button
+                    Grid.Column="1"
+                    Text="درباره"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HeightRequest="150" />-->
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

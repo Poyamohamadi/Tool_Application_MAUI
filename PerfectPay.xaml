@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:ProjectName"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProjectName.PerfectPay"
+    BackgroundColor="#323232">
+    <Grid
+        Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height=".3*" />
+            <RowDefinition
+                Height=".1*" />
+            <RowDefinition
+                Height=".6*" />
+        </Grid.RowDefinitions>
+        <Frame
+            Grid.Row="0"
+            Padding="10"
+            BackgroundColor="#444444"
+            BorderColor="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height=".1*" />
+                    <RowDefinition
+                        Height=".9*" />
+                </Grid.RowDefinitions>
+                <Label
+                    TextColor="White"
+                    Grid.ColumnSpan="3"
+                    FontFamily="Vazir"
+                    Text="مجموع پرداختی"
+                    HorizontalTextAlignment="Center" />
+                <Label
+                    x:Name="lblTotal"
+                    Grid.Row="1"
+                    FontFamily="Vazir"
+                    Text="000 تومان"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    TextColor="White" />
+                <BoxView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,10,10,10"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="Red" />
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Label
+                        FontFamily="Vazir"
+                        FontSize="Large"
+                        Text="بدون بهره"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblSubtotal"
+                        FontFamily="Vazir"
+                        Text="000 تومن"
+                        TextColor="#5FD596"
+                        HorizontalTextAlignment="Center" />
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0,10,10,10"
+                        VerticalOptions="CenterAndExpand"
+                        Width="25"
+                        BackgroundColor="Red" />
+                    <Label
+                        FontFamily="Vazir"
+                        FontSize="Large"
+                        Text="فقط بهره"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center" />
+                    <Label
+                        x:Name="lblTipByPerson"
+                        FontFamily="Vazir"
+                        Text="000 تومن"
+                        TextColor="#5FD596"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width=".4*" />
+                <ColumnDefinition
+                    Width=".6*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                VerticalOptions="Center"
+                Text="مقدار وام خود را وارد کنید:"
+                FontFamily="Vazir"
+                TextColor="White" />
+            <Entry
+                TextChanged="txtBill_Completed"
+                x:Name="txtBill"
+                Grid.Column="1"
+                Keyboard="Numeric"
+                FontFamily="Vazir"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                FlowDirection="LeftToRight"
+                Completed="txtBill_Completed" />
+        </Grid>
+        <Grid
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width=".3*" />
+                <ColumnDefinition
+                    Width=".7*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="1"
+                VerticalOptions="Center"
+                Text="درصد پیشنهادی:"
+                FontFamily="Vazir"
+                TextColor="White" />
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="70"
+                Spacing="10"
+                HorizontalOptions="CenterAndExpand">
+                <Button
+                    FontSize="Medium"
+                    FontFamily="Vazir"
+                    Text="10%"
+                    WidthRequest="70"
+                    Clicked="buttonChack"
+                    TextColor="Black" />
+                <Button
+                    FontSize="Medium"
+                    FontFamily="Vazir"
+                    Text="15%"
+                    WidthRequest="70"
+                    Clicked="buttonChack"
+                    TextColor="Black" />
+                <Button
+                    FontSize="Medium"
+                    FontFamily="Vazir"
+                    Text="20%"
+                    WidthRequest="70"
+                    Clicked="buttonChack"
+                    TextColor="Black" />
+            </HorizontalStackLayout>
+            <Label
+                x:Name="lblTip"
+                Grid.Row="2"
+                FontFamily="Vazir"
+                TextColor="White"
+                Text="درصد: %0"
+                VerticalOptions="Center" />
+            <Slider
+                x:Name="sldTip"
+                MaximumTrackColor="Black"
+                Grid.Row="2"
+                Grid.Column="1"
+                Maximum="50"
+                Minimum="0"
+                ValueChanged="sldTip_ValueChanged" />
+            <Label
+                Grid.Row="3"
+                FontFamily="Vazir"
+                TextColor="White"
+                Text="تعداد مرتبه باز پرداخت:"
+                VerticalOptions="Center" />
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="btnPlus"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    Text="+"
+                    VerticalOptions="Center"
+                    WidthRequest="70"
+                    Clicked="btnPlusChack"
+                    TextColor="Black" />
+                <Label
+                    x:Name="lblNoPerons"
+                    Margin="-5,0,-5,0"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    Text="1"
+                    TextColor="White"
+                    WidthRequest="100"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <Button
+                    x:Name="btnMinus"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    Text="-"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    WidthRequest="70"
+                    Clicked="btnMinusChack" />
+            </HorizontalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

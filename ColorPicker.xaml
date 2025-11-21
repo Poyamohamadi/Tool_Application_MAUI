@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:ProjectName"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProjectName.ColorPicker">
+    <ContentPage.Resources>
+        <Color
+            x:Key="Primary">#ab3527</Color>
+        <Color
+            x:Key="Secondary">#ab3527</Color>
+        <Color
+            x:Key="Tertiary">#ab3527</Color>
+    </ContentPage.Resources>
+    <Grid
+        x:Name="Container"
+        BackgroundColor="Black">
+        <Frame
+            Margin="10,0,10,0"
+            VerticalOptions="Center">
+            <VerticalStackLayout
+                Spacing="15"
+                VerticalOptions="Center">
+                <!--Title-->
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="Vazir"
+                    FontSize="Large"
+                    TextColor="Black"
+                    Text="انتخابگر رنگ "
+                    HorizontalTextAlignment="Center" />
+                <!--Red-->
+                <Label
+                    FontFamily="Vazir"
+                    Text="مقدار رنگ قرمز:"
+                    TextColor="Black" />
+                <Slider
+                    x:Name="sldRed"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChange" />
+                <!--Green-->
+                <Label
+                    FontFamily="Vazir"
+                    Text="مقدار رنگ سبز:"
+                    TextColor="Black" />
+                <Slider
+                    x:Name="sldGreen"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChange" />
+                <!--Blue-->
+                <Label
+                    FontFamily="Vazir"
+                    Text="مقدار رنگ آبی:"
+                    TextColor="Black" />
+                <Slider
+                    x:Name="sldBlue"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChange" />
+                <Frame
+                    CornerRadius="25"
+                    HorizontalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label
+                            x:Name="lblHex"
+                            Text=" HEX #مقدار هگزادسیمال : 000000"
+                            VerticalOptions="Center"
+                            FontFamily="Vazir"
+                            HorizontalTextAlignment="End"
+                            TextColor="Black" />
+                        <ImageButton
+                            Margin="10,0,0,0"
+                            HeightRequest="25"
+                            Source="copy.png"
+                            VerticalOptions="Center"
+                            WidthRequest="25"
+                            Clicked="ImageButton_Clicked" />
+                    </HorizontalStackLayout>
+                </Frame>
+                <Button
+                    x:Name="btnRandom"
+                    BackgroundColor="{StaticResource Secondary}"
+                    TextColor="White"
+                    Text="ساخت یک رنگ تصادفی"
+                    FontFamily="Vazir"
+                    FontSize="Medium"
+                    Clicked="btnRandom_Change" />
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
