@@ -11,30 +11,25 @@ The **Tool Application .net MAUI** is a mobile application built using **.NET MA
 3. [Usage](#usage)  
 4. [Structure](#structure)  
 5. [Dependencies](#dependencies)  
-6. [Contributing](#contributing)  
-7. [License](#license)  
+6. [License](#license)  
 
 ---
 
 ## Features
 
 - **BMI Calculator**:
-  - Calculate Body Mass Index based on height and weight inputs
-  - Support for multiple measurement units (metric and imperial)
+  - Calculate Body Mass Index based on height and weight inputs    
   - Categorization of results (underweight, normal, overweight, etc.)
-  - Historical tracking of BMI calculations
 
 - **Color Picker**:
   - Interactive color selection interface
-  - Multiple color representation formats (RGB, HEX, HSL)
-  - Color palette management
+  - Multiple color representation format HEX
   - Real-time color preview
 
 - **PerfectPay**:
   - Bill splitting and tip calculation functionality
   - Support for multiple payment scenarios
   - Customizable tip percentages
-  - Distribution calculations among groups
 
 ---
 
@@ -118,20 +113,6 @@ The application is organized into the following main components:
 ## Dependencies
 
 - **.NET MAUI**: Cross-platform framework for building native mobile and desktop apps  
-- **Community Toolkit**: Additional controls and utilities for MAUI development
-
----
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository  
-2. Create a new branch for your feature or bug fix  
-3. Commit your changes and push them to your fork  
-4. Submit a pull request detailing your changes  
-
-> Please ensure your code follows the existing coding style and includes appropriate documentation.
 
 ---
 
