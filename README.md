@@ -11,7 +11,6 @@ The **Tool Application .net MAUI** is a mobile application built using **.NET MA
 3. [Usage](#usage)  
 4. [Structure](#structure)  
 5. [Dependencies](#dependencies)  
-6. [License](#license)  
 
 ---
 
@@ -113,12 +112,6 @@ The application is organized into the following main components:
 ## Dependencies
 
 - **.NET MAUI**: Cross-platform framework for building native mobile and desktop apps  
-
----
-
-## License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
